@@ -5,7 +5,7 @@
 
 .border-gradient {
   /* Apply border radius */
-  border: 1px solid transparent;
+  border: 1px solid black;
   /* Set a transparent border */
   border-image: linear-gradient(to right, #033631, #D4A041) 1;
   /* Apply linear gradient as border */
@@ -22,8 +22,27 @@
   width: 450px !important;
   height: 45px !important;
 }
+@media screen and (max-width: 1024px) {
+  .ant-form-item-control-input input {
+    width: 280px !important;
+    height: 35px !important;
+  }
+}
 .ant-form-item-control-input button{
   background-color: #333333 !important;
   border-radius: 24px !important;
-
+}
+@media screen and (max-width: 1024px) {
+  .ant-form-item-control-input button {
+    margin-left: -35px !important;
+  }
+}
+@media (max-width: 575px){
+:where(.css-dev-only-do-not-override-1drr2mu).ant-form:not(.ant-form-inline) .ant-form-item .ant-form-item-label:not([class*=" ant-col-xs"]), :where(.css-dev-only-do-not-override-1drr2mu).ant-form:not(.ant-form-inline) .ant-form-item .ant-form-item-control:not([class*=" ant-col-xs"]){
+max-width: none !important;
+}
+}
+/* Add this to your CSS */
+.transition-transform {
+  transition-property: transform;
 }

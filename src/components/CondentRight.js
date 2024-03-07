@@ -36,33 +36,44 @@ const CondentRight = () => {
         };
       }, []);
   return (
-    <div className="flex  w-[85%] ml-auto  rounded-tl-[200px] rounded-bl-[200px] bg-gradient-to-r from-[#F2E3C6] via-[#9C9D7C] to-[#1F473E]">
+    <div className="flex  lg:w-[90%] ml-auto  lg:rounded-tl-[200px] lg:rounded-bl-[200px] bg-gradient-to-r from-[#F2E3C6] via-[#9C9D7C] to-[#1F473E]">
 
-      <div className="w-[65%] ml-[130px] py-[30px]">
-        <h2 className="text-[36px] font-[700]">
+      <div className="lg:w-[65%] lg:ml-[90px] ml-[35px] md:w-[50%] w-[100%] justify-center  flex md:justify-end mx-auto py-[30px]">
+        <div>
+        <h2 className="lg:text-[36px] md:text-[28px] text-[24px] font-[700]">
           Best Investment Ever <br /> 90% of college students
         </h2>
         <p className="font-[400] text-[16px]">
           who complete this course get jobs in tech roles
         </p>
-        <div className="flex pt-[36px]">
-          <div className="border-[1px] border-[white] min-w-[310px] items-center rounded-[80px] flex bg-gradient-to-r py-[24px] px-[36px] from-[rgba(255,255,255,0.16)] to-[rgba(255,255,255,0.04)]">
-            <h5 className="text-[48px] font-[800]">₹{Math.round(number1 * 10) / 10}</h5>
-            <div className="px-2">
-                <p className="text-[24px] font-[600]">LPA</p>
-                <p className="text-[#666666] text-[14px] font-[400]">Average Salary</p>
+        <div className="lg:flex pt-[36px] justify-around  lg:ml-[0px]">
+            <div className="border-[1px] border-[white] min-w-[310px] max-w-[205px]  items-center rounded-[80px] flex justify-around bg-gradient-to-r lg:py-[18px] py-[12px] lg:px-[30px] px-[18px] from-[rgba(255,255,255,0.16)] to-[rgba(255,255,255,0.04)]">
+              <h5 className="text-[48px]  font-[800]">
+                ₹{Math.round(number1 * 10) / 10}
+              </h5>
+              <div className="px-2">
+                <p className="md:text-[24px] text-[12px] font-[600]">LPA</p>
+                <p className="text-[#666666] text-[14px] font-[400]">
+                  Average Salary
+                </p>
+              </div>
+            </div>
+            <div className="border-[1px] border-[white] min-w-[310px] max-w-[205px]  lg:mx-3 mt-6 lg:mt-0 items-center rounded-[80px] flex justify-around bg-gradient-to-r lg:py-[24px] py-[16px] lg:px-[36px] px-[18px] from-[rgba(255,255,255,0.16)] to-[rgba(255,255,255,0.04)]">
+              <h5 className="text-[48px] font-[800]">
+                {number2}x
+              </h5>
+              <div className="px-2">
+                <p className="text-[#666666] md:text-[14px] text-[12px] font-[400]">
+                  Fees Recovered <br />
+                  Quickly
+                </p>
+              </div>
             </div>
           </div>
-          <div className="border-[1px] border-[white] min-w-[310px]  mx-3 items-center rounded-[80px] flex bg-gradient-to-r py-[24px] px-[36px] from-[rgba(255,255,255,0.16)] to-[rgba(255,255,255,0.04)]">
-            <h5 className="text-[48px] font-[800]">{number2}x</h5>
-            <div className="px-2">
-                <p className="text-[#666666] text-[14px] font-[400]">Fees Recovered <br/>Quickly</p>
-            </div>
           </div>
-        </div>
       </div>
-      <div className="w-[30%] mx-auto">
-        <Image src={leftImage} alt="img" className="pl-[55px] mt-[60px]" />
+      <div className="md:w-[40%] lg:w-[50%] hidden md:flex items-end mx-auto">
+        <Image src={leftImage} alt="img" className="pl-[55px] mt-[60px] hidden md:flex" />
       </div>
     </div>
   )

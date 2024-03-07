@@ -19,13 +19,14 @@ const Navbar = () => {
     const element = document.getElementById(section);
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
+      // window.location.reload();
     }
   };
 
   return (
     <nav className="w-full h-20 bg-[#F4FAFA]">
       <div className="flex justify-between items-center h-full  xl:w-[97%] w-full mx-auto">
-        <div className="px-8">
+        <div className="lg:px-8">
           <Link href="/">
             <Image
               src={Logo}
@@ -36,8 +37,8 @@ const Navbar = () => {
             />
           </Link>
         </div>
-        <div className="hidden sm:flex">
-          <ul className="hidden sm:flex justify-center items-center">
+        <div className="hidden lg:flex">
+          <ul className="hidden lg:flex justify-center items-center">
             <Link href="#">
               <li
                 onClick={() => handleClick("Home")}
@@ -62,7 +63,7 @@ const Navbar = () => {
                 Courses
               </li>
             </Link>
-            <Link href="#training">
+            {/* <Link href="#training">
 
             <li
               onClick={() => handleClick("training")}
@@ -74,7 +75,7 @@ const Navbar = () => {
             >
               Training Process
             </li>
-            </Link>
+            </Link> */}
             <Link href="#placement">
             <li
               onClick={() => handleClick("placement")}
@@ -100,21 +101,21 @@ const Navbar = () => {
               Testimonial
             </li>
             </Link>
-            <Link href="#enquirenow" className="ml-5">
+            <Link href="#enquirenow" className="ml-2">
               <li className="bg-[#333333] text-[white] px-[10px] font-normal py-[8px] rounded-[21px]">
                 Enquire Now
               </li>
             </Link>
           </ul>
         </div>
-        <div className="sm:hidden cursor-pointer pl-20" onClick={handleNav}>
+        <div className="lg:hidden cursor-pointer pl-20 lg:pr-0 pr-4" onClick={handleNav}>
           <AiOutlineMenu size={25} />
         </div>
       </div>
       <div
         className={
           menuopen
-            ? "fixed left-0 top-0 w-[65%] sm:hidden h-screen bg-[#ecf0f3] p-10 ease-in duration-500"
+            ? "fixed left-0 top-0 w-[65%] lg:hidden h-screen bg-[#ecf0f3] p-10 ease-in duration-500 z-10"
             : "fixed left-[-100%] top-0 p-10 ease-out duration-500"
         }
       >
@@ -128,21 +129,50 @@ const Navbar = () => {
             <Link href="/">
               <li className="py-4 hover:border-b">Home</li>
             </Link>
-            <Link href="/">
-              <li className="py-4 hover:border-b">About us</li>
+            <Link href="#courses">
+              <li
+              onClick={() => handleClick("courses")}
+              className={`${
+                clickedFeild === "courses"
+                  ? "text-[#033631] border-b-[2px] border-[#033631]"
+                  : "text-[#666666]"
+              }  py-4`}
+              // className="py-4 hover:border-b"
+              >Courses</li>
             </Link>
-            <Link href="/">
-              <li className="py-4 hover:border-b">Service</li>
+            {/* <Link href="#training">
+              <li
+              onClick={() => handleClick("training")}
+              className={`${
+                clickedFeild === "training"
+                  ? "text-[#033631] border-b-[2px] border-[#033631]"
+                  : "text-[#666666]"
+              }  py-4`}
+              >Training Process</li>
+            </Link> */}
+            <Link href="#placement">
+              <li
+               onClick={() => handleClick("placement")}
+               className={`${
+                 clickedFeild === "placement"
+                   ? "text-[#033631] border-b-[2px] border-[#033631]"
+                   : "text-[#666666]"
+               }  py-4`}
+              >Placement</li>
             </Link>
-            <Link href="/">
-              <li className="py-4 hover:border-b">Contact us</li>
+            <Link href="#testimonial">
+              <li
+              onClick={() => handleClick("testimonial")}
+              className={`${
+                clickedFeild === "testimonial"
+                  ? "text-[#033631] border-b-[2px] border-[#033631]"
+                  : "text-[#666666]"
+              }  py-4`}
+              >Testimonial</li>
             </Link>
-            <Link href="/">
-              <li className="py-4 hover:border-b">Faq&apos;s</li>
-            </Link>
-            <Link href="/">
+            {/* <Link href="/">
               <li className="py-4 hover:border-b">Blogs</li>
-            </Link>
+            </Link> */}
           </ul>
         </div>
       </div>

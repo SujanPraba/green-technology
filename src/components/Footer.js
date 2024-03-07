@@ -1,9 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
-import logo from "../../public/gtlogo.svg";
+import logo from "../../public/FooterLogo.svg";
+import insta from "../../public/footer/insta.svg";
+import twit from "../../public/footer/twit.svg";
 import mobile from "../../public/tabImages/bxs_mobile.svg";
 import fb from "../../public/tabImages/fb1.svg";
-import google from "../../public/tabImages/google1.svg";
 import linkdn from "../../public/tabImages/linkedin.svg";
 import location from "../../public/tabImages/location.svg";
 import mail from "../../public/tabImages/mail.svg";
@@ -11,10 +12,10 @@ import youTube from "../../public/tabImages/youtube.svg";
 const Footer = () => {
   return (
     <div className="bg-[#033631]">
-      <div className="md:flex justify-between xl:w-[85%] lg:w-[95%] w-[95%] mx-auto py-[30px]">
-        <div className="flex justify-center lg:block w-[40%]">
+      <div className="lg:flex justify-between xl:w-[85%] lg:w-[95%] w-[95%] mx-auto py-[30px]">
+        <div className="block lg:justify-center lg:w-[40%]">
           <Link href="/">
-            <Image src={logo} alt="logo" className="cursor-pointer" />
+            <Image src={logo} alt="logo" className="cursor-pointer pl-3" />
           </Link>
           <div className="text-[white] px-3 pt-8">
             <p className="text-[13px] font-[400]">
@@ -25,60 +26,72 @@ const Footer = () => {
               Say goodbye to FOMO and Start with hello to unstoppable growth.
             </p>
           </div>
-          <div className="flex items-center text-[white] px-3 py-5">
+          <div className="lg:flex hidden items-center text-[white] px-3 py-5">
             <p className="text-[14px] font-[400]">Follow Us on</p>
-            <Image src={linkdn} alt="" className="px-1"/>
-            <Image src={fb} alt=""className="px-1"/>
-            <Image src={youTube} alt=""className="px-1"/>
-            <Image src={google} alt=""className="px-1"/>
-
+            <Link href="https://www.linkedin.com/company/greens-education/">
+              <Image src={linkdn} alt="" className="px-1" />
+            </Link>
+            <Link href="https://www.facebook.com/profile.php?id=61556895692559">
+              <Image src={fb} alt="" className="px-1" />
+            </Link>
+            <Link href="https://www.youtube.com/@GreensTechnologies-xp8wk">
+              <Image src={youTube} alt="" className="px-1" />
+            </Link>
+            <Link href="https://www.instagram.com/greenstechofficial?igsh=MWlnZDZoZGZqYnFsOQ%3D%3D&utm_source=qr">
+            <Image src={insta} alt="" className="px-1" />
+          </Link>
+          <Link href="https://twitter.com/GreensTech_">
+            <Image src={twit} alt="" className="px-1" />
+          </Link>
           </div>
         </div>
-        <div>
-          <div className="flex-col py-2 text-[white]">
-            <ul className="">
-              <p className="font-semibold text-[17px]">Quick Links</p>
-              <Link href="/">
-                <li className="py-2 font-light">About</li>
-              </Link>
-              <Link href="/">
-                <li className="py-2 font-light">Courses</li>
-              </Link>
-              <Link href="/">
-                <li className="py-2 font-light">Training Process</li>
-              </Link>
-              <Link href="/">
-                <li className="py-2 font-light">Placement</li>
-              </Link>
-              <Link href="/">
-                <li className="py-2 font-light">Corporates</li>
-              </Link>
-              <Link href="/">
-                <li className="py-2 font-light">Admission</li>
-              </Link>
-            </ul>
+        <div className="flex justify-between lg:block pt-8 lg:pt-0">
+          <div className="">
+            <div className="flex-col py-2 text-[white] px-4 lg:px-0">
+              <ul className="">
+                <p className="font-semibold text-[17px]">Quick Links</p>
+                <Link href="/">
+                  <li className="py-2 font-light">About</li>
+                </Link>
+                <Link href="#courses">
+                  <li className="py-2 font-light">Courses</li>
+                </Link>
+                <Link href="#training">
+                  <li className="py-2 font-light">Training Process</li>
+                </Link>
+                <Link href="#placement">
+                  <li className="py-2 font-light">Placement</li>
+                </Link>
+                <Link href="/">
+                  <li className="py-2 font-light">Corporates</li>
+                </Link>
+                <Link href="/">
+                  <li className="py-2 font-light">Admission</li>
+                </Link>
+              </ul>
+            </div>
+          </div>
+          <div>
+            {/* <div className="flex-col py-2 text-[white] px-4 lg:px-0">
+              <ul className="">
+                <p className="font-semibold text-[17px]">Major Link</p>
+                <Link href="/">
+                  <li className="py-2 font-light">Blog</li>
+                </Link>
+                <Link href="/">
+                  <li className="py-2 font-light">Privacy Policy</li>
+                </Link>
+                <Link href="/">
+                  <li className="py-2 font-light">Terms and Condition</li>
+                </Link>
+                <Link href="#enquirenow">
+                  <li className="py-2 font-light">Contact us</li>
+                </Link>
+              </ul>
+            </div> */}
           </div>
         </div>
-        <div>
-          <div className="flex-col py-2 text-[white]">
-            <ul className="">
-              <p className="font-semibold text-[17px]">Major Link</p>
-              <Link href="/">
-                <li className="py-2 font-light">Blog</li>
-              </Link>
-              <Link href="/">
-                <li className="py-2 font-light">Privacy Policy</li>
-              </Link>
-              <Link href="/">
-                <li className="py-2 font-light">Terms and Condition</li>
-              </Link>
-              <Link href="/">
-                <li className="py-2 font-light">Contact us</li>
-              </Link>
-            </ul>
-          </div>
-        </div>
-        <div className="text-[white]">
+        <div className="text-[white] px-4 lg:px-0 pt-8 lg:pt-0">
           <div>
             <p className="font-semibold text-[17px]">Contact us</p>
           </div>
@@ -100,6 +113,24 @@ const Footer = () => {
               <br /> Chennai-600 020.
             </p>
           </div>
+        </div>
+        <div className="flex lg:hidden items-center justify-center lg:justify-start text-[white] px-4 py-5">
+          <p className="text-[14px] font-[400]">Follow Us on</p>
+          <Link href="https://www.linkedin.com/company/greens-education/">
+            <Image src={linkdn} alt="" className="px-1" />
+          </Link>
+          <Link href="https://www.facebook.com/profile.php?id=61556895692559">
+            <Image src={fb} alt="" className="px-1" />
+          </Link>
+          <Link href="https://www.youtube.com/@GreensTechnologies-xp8wk">
+            <Image src={youTube} alt="" className="px-1" />
+          </Link>
+          <Link href="https://www.instagram.com/greenstechofficial?igsh=MWlnZDZoZGZqYnFsOQ%3D%3D&utm_source=qr">
+            <Image src={insta} alt="" className="px-1" />
+          </Link>
+          <Link href="https://twitter.com/GreensTech_">
+            <Image src={twit} alt="" className="px-1" />
+          </Link>
         </div>
       </div>
     </div>
