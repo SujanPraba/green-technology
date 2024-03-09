@@ -5,15 +5,15 @@ import quotes from "../../public/quotes.svg";
 const SlidingContent = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const images = [
-    <div className="">
-      <li className="p-8 border rounded-xl w-[450px]">
+    <div key="image1">
+      <li className="p-8 border rounded-xl w-[75%] mx-auto">
         <div className="flex w-full items-start justify-between">
           <Image src={quotes} alt="img" />
           <div className="pl-12">
             <p className="font-[400] text-[14px]">
-              "Exceptional sessions with meticulous planning. They instill the
-              confidence needed to advance in one's career. Thank you, Vijay,
-              I'll be reaching out soon with my inquiries
+            &quot;Exceptional sessions with meticulous planning. They instill the
+              confidence needed to advance in one&apos;s career. Thank you, Vijay,
+              I&apos;ll be reaching out soon with my inquiries
             </p>
             <p className="pt-2">
               Narendar <br />{" "}
@@ -23,15 +23,15 @@ const SlidingContent = () => {
         </div>
       </li>
     </div>,
-    <div className="">
-      <li className="p-8 border rounded-xl w-[450px]">
+    <div className="" key="image2">
+      <li className="p-8 border rounded-xl w-[75%] mx-auto">
         <div className="flex w-full items-start justify-between">
           <Image src={quotes} alt="img" />
           <div className="pl-12">
             <p className="font-[400] text-[14px]">
-              I was once your student during your early training days. Now, I've
+              I was once your student during your early training days. Now, I&apos;ve
               had the pleasure of attending your Informatic session again. I
-              must say, I'm thoroughly impressed by the training program. I've
+              must say, I&apos;m thoroughly impressed by the training program. I&apos;ve
               gained invaluable knowledge on numerous new topics through this
               course. Thank you immensely
             </p>
@@ -43,8 +43,8 @@ const SlidingContent = () => {
         </div>
       </li>
     </div>,
-    <div className="">
-      <li className="p-8 border rounded-xl w-[450px]">
+    <div className="" key="image3">
+      <li className="p-8 border rounded-xl w-[75%] mx-auto">
         <div className="flex w-full items-start justify-between">
           <Image src={quotes} alt="img" />
           <div className="pl-12">
@@ -63,13 +63,13 @@ const SlidingContent = () => {
         </div>
       </li>
     </div>,
-    <div className="">
-      <li className="p-8 border rounded-xl w-[450px]">
+    <div className="" key="image4">
+      <li className="p-8 border rounded-xl w-[75%] mx-auto">
         <div className="flex w-full items-start justify-between">
           <Image src={quotes} alt="img" />
           <div className="pl-12">
             <p className="font-[400] text-[14px]">
-              "Every session is phenomenal and incredibly valuable... it's like
+            &quot;Every session is phenomenal and incredibly valuable... it&apos;s like
               discovering hidden treasures! I cannot emphasize enough how
               fortunate we all are to have you as our mentor for the Digital
               Marketing course. your expertise in SEO and SEM has been
@@ -99,7 +99,7 @@ const SlidingContent = () => {
   };
 
   return (
-    <div className="relative flex justify-center lg:w-[60%] lg:items-center  w-[100%] mx-auto min-h-[390px]">
+    <div className="relative flex justify-center lg:w-[60%] lg:items-center  w-[100%] mx-auto min-h-[350px]">
       <button
         className="absolute left-1 top-1/2 transform -translate-y-1/2 focus:outline-none bg-[white] shadow-lg rounded-3xl p-2"
         onClick={goToPrevSlide}
@@ -118,7 +118,7 @@ const SlidingContent = () => {
           {images.map((image, index) => (
             <div
               key={index}
-              className={`h-[400px] w-300 ${
+              className={`flex items-center ${
                 index === currentImageIndex ? "block" : "hidden"
               }`}
             >

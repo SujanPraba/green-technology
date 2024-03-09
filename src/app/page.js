@@ -41,6 +41,7 @@ export default function Home() {
 
   return (
     <div className="scroll-smooth">
+
       <Navbar />
       <div className="bg-[#F4FAFA] w-full lg:flex justify-between lg:px-[60px] px-[30px] lg:pt-[60px] pt-[30px] py-[15px]">
         <div className="lg:w-45%">
@@ -268,7 +269,7 @@ export default function Home() {
       <SlidingCondent/>
       </section>
       {/* <-------------------- Faq--------------------> */}
-      <section className="lg:pt-[100px] pt-[60px]">
+      <section className="lg:pt-[60px] pt-[30px]">
         <FaqComponent />
       </section>
        {/* <-------------------- Form--------------------> */}

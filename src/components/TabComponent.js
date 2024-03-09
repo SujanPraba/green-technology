@@ -18,13 +18,13 @@ export default function TabComponent() {
       <div className="w-[100%] lg:w-[95%] mx-auto flex lg:justify-between justify-center items-center lg:pt-[75px] pt-[20px]">
         <div className="lg:w-[63%] w-[80%]">
           <h3 className="md:text-[22px] text-[16px] font-[600] text-[white]">
-            What you'll learn
+            What you&apos;ll learn
           </h3>
           <p className="font-[400] lg:text-[13px] text-[11px] text-[white] lg:py-3 py-1">
             Immerse yourself in a rich tapestry of both fundamental and advanced
             concepts, honing your skills in key areas such as Social Media
             Marketing, Search Engine Optimization, and Content Marketing. But
-            wait, there’s more! Explore the latest trends in digital marketing,
+            wait, there&apos;s more! Explore the latest trends in digital marketing,
             from Affiliate Marketing to Email Marketing, and beyond.
           </p>
           <p className="font-[400] lg:text-[13px]  text-[11px] text-[white] lg:py-3 py-1">
@@ -359,8 +359,8 @@ export default function TabComponent() {
                   "w-full rounded-3xl lg:py-2.5 lg:text-sm md:text-[10px] text-[8px] font-[400] lg:leading-5",
                   "ring-white/60 ring-offset-2 ring-offset-[#033631] focus:outline-none",
                   selected
-                    ? "bg-[#033631] text-[white] shadow py-[6px]"
-                    : "text-[#033631] hover:bg-white/[0.12] hover:text-white"
+                    ? "bg-[#033631] text-[white] shadow py-[6px] text-[7px]"
+                    : "text-[#033631] hover:bg-white/[0.12] hover:text-white text-[7px]"
                 )
               }
             >

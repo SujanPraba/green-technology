@@ -101,7 +101,7 @@ const FaqComponent = () => {
                   >
                     <Disclosure.Panel className="px-4 pb-2 pt-4 lg:text-sm text-[11px] text-gray-500">
                       Qualifications for digital marketing typically include a
-                      bachelor's degree in marketing, communications, or a
+                      bachelor&apos;s degree in marketing, communications, or a
                       related field. However, practical experience,
                       certifications, and a strong understanding of digital
                       platforms are also valued.
